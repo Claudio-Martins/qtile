@@ -34,7 +34,11 @@ from libqtile import layout, bar, widget, hook, qtile
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, Rule
 from libqtile.command import lazy
 from libqtile.widget import Spacer
+from libqtile.utils import guess_terminal
 # import arcobattery
+
+#Guess terminal
+terminal = guess_terminal()
 
 # Get the number of connected screens
 def get_monitors():
@@ -76,17 +80,17 @@ keys = [
 # Most of our keybindings are in sxhkd file - except these
 
 # SUPER + FUNCTION KEYS
-
+    
+    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "b", lazy.hide_show_bar(), desc="Toggle bar visibility"),
     Key([mod], "f", lazy.window.toggle_fullscreen()),
     Key([mod], "q", lazy.window.kill()),
-
 
 # SUPER + SHIFT KEYS
 
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
-
+    Key([mod, "shift"], "Return", lazy.spawn("thunar"), desc='Run Launcher'),
 
 # QTILE LAYOUT KEYS
     Key([mod], "n", lazy.layout.normalize()),
@@ -101,7 +105,6 @@ keys = [
     Key([mod], "j", lazy.layout.down()),
     Key([mod], "h", lazy.layout.left()),
     Key([mod], "l", lazy.layout.right()),
-
 
 # RESIZE UP, DOWN, LEFT, RIGHT
     Key([mod, "control"], "l",
