@@ -201,7 +201,8 @@ group_apps = [
              ["Thunderbird", "Mail"],
                 ]
 #group_labels = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 ", " 0 ",]
-group_labels = ["₁", " ₂", " ₃", "₄", " ₅", " ₆", "₇", " ₈", " ₉", " ₀",]
+#group_labels = ["₁", " ₂", " ₃", "₄", " ₅", " ₆", "₇", " ₈", " ₉", " ₀",]
+group_labels = ["GUAC ₁", "FRF ₂", "RMT ₃", "TRM₄", "IMG ₅", "VID ₆", "SCR ₇", "FMG ₈", "CHT ₉", "MAIL ₀",]
 #group_labels = ["", "", "", "", "", "", "", "", "", "",]
 #group_labels = ["Web", "Edit/chat", "Image", "Gimp", "Meld", "Video", "Vb", "Files", "Mail", "Music",]
 
