@@ -35,7 +35,6 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen, Rule
 from libqtile.command import lazy
 from libqtile.widget import Spacer
 from libqtile.utils import guess_terminal
-# import arcobattery
 
 #Guess terminal
 terminal = guess_terminal()
@@ -90,7 +89,8 @@ keys = [
 
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
-    Key([mod, "shift"], "Return", lazy.spawn("thunar"), desc='Run Launcher'),
+    Key([mod, "shift"], "d", lazy.spawn('rofi -show combi -combi-modes "window,run,ssh,drun" -modes combi'), desc='Run Launcher'),
+    Key([mod, "shift"], "Return", lazy.spawn("thunar"), desc='Run FileManager'),
 
 # QTILE LAYOUT KEYS
     Key([mod], "n", lazy.layout.normalize()),
